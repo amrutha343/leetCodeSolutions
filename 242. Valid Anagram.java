@@ -1,3 +1,10 @@
+/*
+* This logic was created using HashMap as it has a capability to store key value pairs without repetition.
+* Runtime 21ms Beats 10.90% 
+* Time Complexity O(N)
+* Memory 44.22 MB Beats 57.76%
+* Space Complexity O(N)
+*/
 package com.helloworld;
 
 import java.util.HashMap;
