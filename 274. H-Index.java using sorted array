@@ -1,0 +1,33 @@
+/**
+ * The time complexity of this solution is O(nlogn) due to the sorting
+ *  of the citations array. The space complexity is O(1) because the
+ *   algorithm uses a constant amount of extra space regardless of the input size.
+ */
+package com.array;
+
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Queue;
+
+public class Hello {
+	public static void main(String args[]) 
+	 { 
+		 int[] citations = {1};
+		 Solution s = new Solution();
+		 System.out.println("Highest profit is = "+s.hIndex(citations));
+	 } 
+}
+class Solution {
+    public int hIndex(int[] citations) {
+      int hIndex = 0;
+    	Arrays.sort(citations);
+    	for(int i=citations.length-1;i>=0;i--) {
+    		if(citations[i]>=hIndex+1)
+    			hIndex++;
+    	}
+        return hIndex;
+    }
+}
+
